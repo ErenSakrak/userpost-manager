@@ -87,4 +87,5 @@ ESLint compliant code.
 ## Author
 
 Name: Eren ŞAKRAK
+<br>
 Email: erensakrak@outlook.com
