@@ -53,8 +53,8 @@ export default function PostList() {
       setFormError("⚠️ Başlık boş olamaz.");
       return;
     }
-    if (newPost.title.length > 100) {
-      setFormError("⚠️ Başlık en fazla 100 karakter olabilir.");
+    if (newPost.title.length > 40) {
+      setFormError("⚠️ Başlık en fazla 40 karakter olabilir.");
       return;
     }
 
@@ -202,10 +202,10 @@ export default function PostList() {
               className="border p-2 w-full mb-1 rounded"
               placeholder="Title"
               value={newPost.title}
-              maxLength={100}
+              maxLength={40}
               onChange={e => setNewPost({ ...newPost, title: e.target.value })}
             />
-            <div className="text-xs text-gray-500 mb-2">{newPost.title.length}/100</div>
+            <div className="text-xs text-gray-500 mb-2">{newPost.title.length}/40</div>
 
             <div className="flex justify-end gap-2 mt-4">
               <button

@@ -48,12 +48,12 @@ export default function UserList() {
       setFormError("⚠️ Kullanıcı adı en fazla 20 karakter olabilir.");
       return;
     }
-    if (newUser.name.length > 50) {
-      setFormError("⚠️ İsim en fazla 50 karakter olabilir.");
+    if (newUser.name.length > 20) {
+      setFormError("⚠️ İsim en fazla 20 karakter olabilir.");
       return;
     }
-    if (newUser.email.length > 100) {
-      setFormError("⚠️ Email en fazla 100 karakter olabilir.");
+    if (newUser.email.length > 40) {
+      setFormError("⚠️ Email en fazla 40 karakter olabilir.");
       return;
     }
     if (!validateEmail(newUser.email)) {
@@ -199,11 +199,11 @@ export default function UserList() {
               className="border p-2 w-full mb-1 rounded"
               placeholder="Name"
               value={newUser.name}
-              maxLength={50}
+              maxLength={20}
               onChange={e => setNewUser({ ...newUser, name: e.target.value })}
               required
             />
-            <div className="text-xs text-gray-500 mb-2">{newUser.name.length}/50</div>
+            <div className="text-xs text-gray-500 mb-2">{newUser.name.length}/20</div>
 
 
             <input
@@ -222,11 +222,11 @@ export default function UserList() {
               placeholder="Email"
               type="email"
               value={newUser.email}
-              maxLength={100}
+              maxLength={40}
               onChange={e => setNewUser({ ...newUser, email: e.target.value })}
               required
             />
-            <div className="text-xs text-gray-500 mb-2">{newUser.email.length}/100</div>
+            <div className="text-xs text-gray-500 mb-2">{newUser.email.length}/40</div>
 
             <div className="flex justify-end gap-2 mt-4">
               <button
