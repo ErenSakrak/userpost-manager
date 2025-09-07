@@ -1,6 +1,6 @@
 import { Controller, Get, Post, Put, Delete, Body, Param, ParseIntPipe } from '@nestjs/common';
 import { PostsService } from './posts.service';
-import type { Post as PostType } from './posts.service'; // ⚡ Post tipine alias verdik
+import type { Post as PostType } from './posts.service';
 
 @Controller('posts')
 export class PostsController {
