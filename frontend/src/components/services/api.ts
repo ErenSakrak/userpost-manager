@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_BASE = 'http://localhost:3000';
+const API_BASE = 'https://userpost-manager.onrender.com';
 
 export interface User {
   id: number;
